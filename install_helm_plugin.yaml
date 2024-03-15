@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  tasks:
+     - name: Install Helm Plugin
+       kubernetes.core.helm_plugin:
+    	   plugin_path: https://github.com/adamreese/helm-env
+    	   state: present
+    	   release_namespace: testing
