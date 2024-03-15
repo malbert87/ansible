@@ -1,10 +1,12 @@
 ---
 - hosts: all
-- name: Deploy demo chart using values files on target
-  kubernetes.core.helm:
-    name: ma-otel-demo-app
-    chart_ref: open-telemetry/opentelemetry-demo
-    chart_version: 0.29.0
-    release_namespace: ma-otel-demo
-    values_files:
-      - /home/ec2-user/otel-demo-webstore-override.yaml
+
+  tasks:
+  - name: Deploy demo chart using values files on target
+    kubernetes.core.helm:
+      name: ma-otel-demo-app
+      chart_ref: open-telemetry/opentelemetry-demo
+      chart_version: 0.29.0
+      release_namespace: ma-otel-demo
+      values_files:
+       - /home/ec2-user/otel-demo-webstore-override.yaml
