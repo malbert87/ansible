@@ -1,4 +1,4 @@
-- name: Deploy Grafana chart using values files on target
+- name: Deploy Demo chart using values files on target
   kubernetes.core.helm:
     name: ma-otel-demo-app
     chart_ref: open-telemetry/opentelemetry-demo
