@@ -1,5 +1,5 @@
 ---
-
+- hosts: all
 - name: Deploy demo chart using values files on target
   kubernetes.core.helm:
     name: ma-otel-demo-app
