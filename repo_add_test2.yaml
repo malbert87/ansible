@@ -1,0 +1,16 @@
+—
+ – name: Setup
+   hosts: all
+   become: true
+   tasks:
+     – name: Install Helm Diff
+       kubernetes.core.helm_plugin:
+         plugin_path: "https://github.com/databus23/helm-diff&quot;
+         state: present
+       become: false
+     – name: Add Chart repo for kubernetes
+       kubernetes.core.helm_repository:
+         repo_name: "nginx-stable"
+         repo_url: "https://helm.nginx.com/stable&quot;
+         repo_state: present
+       become: false
