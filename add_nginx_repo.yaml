@@ -6,7 +6,6 @@
   - kubernetes.core
 
   tasks:
-  tasks:
 - name: Add stable chart repo
   kubernetes.core.helm_repository:
     name: stable
