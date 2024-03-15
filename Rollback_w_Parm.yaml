@@ -12,5 +12,4 @@
       release_namespace: ma-otel-demo
       values_files:
        - /home/ec2-user/otel-demo-webstore-override.yaml
-      become: true
-      msg: "Status is {{ stat }}"
+
