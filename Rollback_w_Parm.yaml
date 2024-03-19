@@ -2,8 +2,15 @@
 - hosts: all
   vars:
     stat: "none"
-
   tasks:
+  - name: removve 29.1 
+    kubernetes.core.helm:
+      name: ma-otel-demo-app
+      chart_ref: open-telemetry/opentelemetry-demo
+      state: absent
+      release_namespace: ma-otel-demo
+      wait: true
+      
   - name: Deploy 29.0 
     kubernetes.core.helm:
       name: ma-otel-demo-app
