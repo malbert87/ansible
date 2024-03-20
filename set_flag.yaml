@@ -1,9 +1,7 @@
 ---
 - hosts: all
   vars:
-     helm_chart_url: "https://charts.bitnami.com/bitnami"
+    stat: "none"
   tasks:
-      - name: Add helm repo
-        kubernetes.core.helm_repository:
-          name: bitnami
-          repo_url: "{{ helm_chart_url }}"
+    - name: Set Flag
+      command: /home/ec2-user/democontol.sh adServiceFailure disable
