@@ -20,6 +20,4 @@
       values_files:
        - /home/ec2-user/otel-demo-webstore-override.yaml
 
-  - name: Deploy 29.0 
-      debug:
-        msg: "{{ stat }}"
+
