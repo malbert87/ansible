@@ -4,7 +4,7 @@
     stat: "none"
   tasks:
     - name: Set Flag
-      command: /home/ec2-user/democontol.sh cartServiceFailure disable    
+      command: /home/ec2-user/democontol.sh "{{ stat }}" disable    
  
     - name: Log 1
       debug:
