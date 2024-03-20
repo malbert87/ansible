@@ -1,0 +1,9 @@
+In this demonstration I’m going to show how cisco AppDynamics can initiate a change to a feature flag based on incident.  The catservice is generating errors and this matches the condition for a feature flag change.  
+
+When the service starts receiving errors a critical condition is detected.  The health rule then makes a webhook call to Ansible that changes the feature flag setting.   
+
+
+Here we can see the set feature flag action connected to the health rule and in ansible the job has been run. 
+
+
+Going back to the cisco AppDynamics console we see the errors return back to 0 and the application has stabilized. 
