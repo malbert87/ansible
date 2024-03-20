@@ -3,7 +3,7 @@
   vars:
     stat: "none"
   tasks:
-  - name: removve 29.1 
+  - name: remove 29.1 
     kubernetes.core.helm:
       name: ma-otel-demo-app
       chart_ref: open-telemetry/opentelemetry-demo
