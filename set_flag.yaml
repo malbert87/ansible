@@ -4,4 +4,4 @@
     stat: "none"
   tasks:
     - name: Set Flag
-      command: /home/ec2-user/democontol.sh adServiceFailure disable
+      command: /home/ec2-user/democontol.sh cartServiceFailure disable
